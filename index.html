@@ -22,9 +22,11 @@
                 
 			 global_ = this.responseText
 			 
+		    if(global_ != "0" or global_ != 0 or global_ != "" or global_ != null)
+		    {
 			 cordova.plugins.notification.badge.set(global_, showToast);
-					 alert(global_);
-			 
+					// alert(global_);
+		    } 
 				
             }
         };
