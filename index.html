@@ -25,10 +25,10 @@
 		    if(global_ != "-" || global_ != "0" || global_ != 0 || global_ != "" || global_ != null)
 		    {
 			 cordova.plugins.notification.badge.set(global_, showToast);
-					 
+			alert(global_);		 
 		    } 
 				
-		    alert(global_);
+		    
             }
         };
         xmlhttp.open("GET","https://shiftclocker.com/test2/dcare/message-count.php",true);
@@ -185,10 +185,16 @@
                         showWinDialog(text);
                     } else
                     if (window.plugins && window.plugins.toast) {
+			    if(text != "-")
+			    {
                         window.plugins.toast.showShortBottom(String(text));
+			    }
                     }
                     else {
+			    if(text != "-")
+			    {
                         alert(text);
+			    }
                     }
                 }, 100);
             };
