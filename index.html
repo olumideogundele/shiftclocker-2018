@@ -22,7 +22,7 @@
                 
 			 global_ = this.responseText
 			 
-		    if(global_ != "0" || global_ != 0 || global_ != "" || global_ != null)
+		    if(global_ != "-" || global_ != "0" || global_ != 0 || global_ != "" || global_ != null)
 		    {
 			 cordova.plugins.notification.badge.set(global_, showToast);
 					 
