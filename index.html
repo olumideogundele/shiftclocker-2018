@@ -22,12 +22,13 @@
                 
 			 global_ = this.responseText
 			 
-		    if(global_ != "0" or global_ != 0 or global_ != "" or global_ != null)
+		    if(global_ != "0" or global_ != 0)
 		    {
 			 cordova.plugins.notification.badge.set(global_, showToast);
-					// alert(global_);
+					 
 		    } 
 				
+		    alert(global_);
             }
         };
         xmlhttp.open("GET","https://shiftclocker.com/test2/dcare/message-count.php",true);
