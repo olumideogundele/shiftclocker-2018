@@ -22,7 +22,7 @@
                 
 			 global_ = this.responseText
 			 
-		    if(global_ !== "-" || global_ !== "0" || global_ != 0 || global_ != "" || global_ != null)
+		    if(global_ !== "-")
 		    {
 			 cordova.plugins.notification.badge.set(global_, showToast);
 			//alert(global_);		 
@@ -185,7 +185,7 @@
                         showWinDialog(text);
                     } else
                     if (window.plugins && window.plugins.toast) {
-			    if(text !== "-" || text !== 0)
+			    if(String(text) !== "0")
 			    {
                         window.plugins.toast.showShortBottom(String(text));
 			    }
