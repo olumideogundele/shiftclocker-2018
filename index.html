@@ -185,7 +185,7 @@
                         showWinDialog(text);
                     } else
                     if (window.plugins && window.plugins.toast) {
-			    if(text != "-")
+			    if(text !== "-" || text !== 0)
 			    {
                         window.plugins.toast.showShortBottom(String(text));
 			    }
