@@ -16,7 +16,7 @@
     <name>Shiftclocker</name>
     <description>Punch in made easy</description>
     <author href="http://www.online.shiftclocker.com" email="info@shiftclocker.com">Olumide Francis</author>
-    <!--<content src="index.html" />-->
+    <content src="index.html" />
     <preference name="permissions" value="none" />
 	<preference name="android-build-tool" value="gradle" />
     <preference name="orientation" value="default" />
@@ -92,13 +92,14 @@
 	
 	
  
+  <splash src="splash.png" />
+
+
 
    <!-- <plugin name="org.apache.cordova.device" version="0.2.3" source="npm"/> -->
     
  
-		<feature name="http://tizen.org/api/systeminfo" required="true"/>
-<plugin name="NetworkStatus" value="org.apache.cordova.NetworkManager" />
-
+		
 		
 		 
 		<feature name="http://api.phonegap.com/1.0/media" />
