@@ -38,7 +38,90 @@
  
 }
 	</script>
+<script src="offline.min.js"></script>
+	  
+	   <link rel="stylesheet" href="offline-theme-hubspot.css" />
+ 
+<link rel="stylesheet" href="offline-language-english.css" />
+	  
+	  
+<script type="text/javascript" charset="utf-8">
 
+	
+	
+    // Wait for device API libraries to load
+    //
+	
+	 
+	
+ 
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+     
+ 
+       var networkState = checkConnection();
+   /* load local files if there is not network connection */
+                  if (networkState == Connection.NONE) {
+                      window.location="error.html";
+                  } else {
+			  //alert("i got here");
+             var run = function(){
+  var req = new XMLHttpRequest();
+ 
+	 req.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                
+			 
+					 alert("true");
+			 
+				
+            }
+			else
+			{
+			alert("false");
+			
+			}
+        };
+		     req.timeout = 5000;	      
+  req.open('GET', 'https://google.com/', true); 
+   req.send();
+ 
+  
+
+  
+  
+  
+
+ 
+ 
+}
+
+setInterval(run, 3000);
+                  }
+    }
+
+        function checkConnection() {
+            var networkState = navigator.connection.type;
+
+            var states = {};
+            states[Connection.UNKNOWN]  = 'Unknown connection';
+            states[Connection.ETHERNET] = 'Ethernet connection';
+            states[Connection.WIFI]     = 'WiFi connection';
+            states[Connection.CELL_2G]  = 'Cell 2G connection';
+            states[Connection.CELL_3G]  = 'Cell 3G connection';
+            states[Connection.CELL_4G]  = 'Cell 4G connection';
+            states[Connection.CELL]     = 'Cell generic connection';
+            states[Connection.NONE]     = 'No network connection';
+  return networkState;
+            //alert('Connection type: ' + states[networkState]);
+        }
+
+    </script>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -124,7 +207,6 @@
  
 
     <section class="copyright">
-        <h2></h2>
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -136,11 +218,7 @@
                      
                 </div>
 
-                <div class="col-md-6">
-                    <div class="scroll_top">
-                        <a href="#HOME"><i class="fa fa-angle-up"></i></a>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </section>
