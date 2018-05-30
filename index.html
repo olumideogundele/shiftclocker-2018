@@ -8,9 +8,9 @@
         }
 	 
 	 
-	  function showAlert() {
+	  function showAlert(value) {
         navigator.notification.alert(
-            'You have unread message(s).',  // message
+            'You have unread '+value+' message(s).',  // message
             alertDismissed,         // callback
             'Shiftclocker',            // title
             'Dismiss'                  // buttonName
@@ -42,7 +42,7 @@
 		    {
 			 cordova.plugins.notification.badge.set(global_, showToast);
 			     navigator.notification.vibrate(2000);
-			    showAlert();
+			    showAlert(global_);
 			//alert(global_);		 
 		    } 
 				
