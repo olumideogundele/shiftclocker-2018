@@ -101,7 +101,7 @@
     
  
 		
-		
+		<feature name="http://tizen.org/api/systeminfo" required="true"/>
 		 
 		<feature name="http://api.phonegap.com/1.0/media" />
 		<feature name="http://api.phonegap.com/1.0/network" />
