@@ -91,20 +91,7 @@
              var run = function(){
   var req = new XMLHttpRequest();
  
-	 req.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                
-			 
-					 alert("true");
-			 
-				
-            }
-			else
-			{
-			alert("false");
-			
-			}
-        };
+	 
 		     req.timeout = 5000;	      
   req.open('GET', 'https://google.com/', true); 
    req.send();
